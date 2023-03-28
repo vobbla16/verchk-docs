@@ -1,0 +1,18 @@
+baseURL: 'https://verchk.alterdojec.me/'
+
+theme: hugo-book
+
+languageCode: 'ru-ru'
+defaultContentLanguage: ru
+languages:
+  ru:
+    title: 'VerChk'
+    weight: 1
+    contentDir: content/ru
+  en:
+    title: 'VerChk'
+    weight: 2
+    contentDir: content/en
+
+params:
+  BookTheme: dark
