@@ -6,13 +6,26 @@ languageCode: 'ru-ru'
 defaultContentLanguage: ru
 languages:
   ru:
-    title: 'VerChk'
+    title: 'Документация VerChk'
+    languageName: Русский
     weight: 1
     contentDir: content/ru
   en:
-    title: 'VerChk'
+    title: 'VerChk Docs'
+    languageName: English
     weight: 2
     contentDir: content/en
 
 params:
   BookTheme: dark
+  BookRepo: "https://github.com/vobbla16/verchk-docs"
+  BookSearch: true
+  BookComments: false
+
+menu:
+  after:
+    - name: GitHub repo
+      params:
+        rel: external
+      url: https://github.com/vobbla16/verchk
+      weight: 30
