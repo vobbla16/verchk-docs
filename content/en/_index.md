@@ -1,5 +1,5 @@
 ---
-title: "Документация к VerChk"
+title: "Welcome page"
 ---
 
 #### Welcome to VerChk Documentation
