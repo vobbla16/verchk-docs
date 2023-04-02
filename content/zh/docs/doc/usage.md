@@ -1,14 +1,14 @@
 ---
-title: Using the tool
+title: 使用该工具
 ---
 
-## Subcommands
-At the moment the tool has 4 subcommands
+## 子命令
+目前，该工具有4个子命令
 
-### `show-targets` subcommand
-Shows a list of all extensions installed in this assembly for scanning services: the name of the system scanned by the extension and the base CPE name
+### `show-targets`子命令
+显示在这个组件中安装的所有用于扫描服务的扩展的列表：扩展所扫描的系统名称和基本CPE名称
 
-Sample output (in human readable format):
+输出样本（以人可读的格式）：
 ```text
 All available systems to scan:
 ╭─┬──────────┬─────────────────────────────────────────────────────╮
@@ -19,10 +19,10 @@ All available systems to scan:
 ╰─┴──────────┴─────────────────────────────────────────────────────╯
 ```
 
-### `determine (url)` subcommand
-Allows you to determine the system installed on the given URL. Checks are run by all extensions at the same time, the check status for each extension is shown in real time (can be disabled, see [quiet mode]({{< relref "#-s-option-wip" >}})).
+### `determine (url)`子命令
+允许你确定安装在给定URL上的系统。检查由所有扩展同时进行，每个扩展的检查状态都会实时显示（可以禁用，见[quiet mode]({{< relref "#-s-option-wip" >}})）。
 
-Sample output:
+输出样本：
 ```text
 ✓ Target is Confluence
 ✗ Target is not Grafana
@@ -35,10 +35,10 @@ Possibly installed on endpoint:
 ╰─┴─────────────┴─────────────────────────────────────────────────────╯
 ```
 
-### `determine-version (url)` subcommand
-Allows you to determine the system and its version installed on the passed URL. Just like in `determine`, the process of all checks is shown in real time with signs.
+### `determine-version (url)`子命令
+允许你确定系统和它安装在传递的URL上的版本。就像在`determine`中一样，所有检查的过程都会用标志实时显示。
 
-Sample output:
+输出样本：
 ```text
 ✓ Target is Confluence
 ✗ Target is not Grafana
@@ -52,10 +52,10 @@ Possible versions of systems possibly installed on endpoint:
 ╰─┴─────────────┴───────╯
 ```
 
-### `get-cves (url)` subcommand
-Allows you to determine the vulnerabilities that affect the version of the system installed at this URL.
+### `get-cves (url)`子命令
+允许你确定影响安装在这个URL的系统版本的漏洞。
 
-Example conclusions:
+结论示例：
 ```text
 ✓ Target is Confluence
 ✗ Target is not Grafana
@@ -74,10 +74,10 @@ Confluence 7.13.0:
 ╰─┴──────────────┴────────────┴───────────────────┴─────────────────╯
 ```
 
-#### `-d` option
-Allows you to display more information about each vulnerability.
+#### `-d`选项
+允许你显示关于每个漏洞的更多信息。
 
-{{< details title="Sample Output" >}}
+{{< details title="输出示例">}}}的详细信息。
 ```text
 ✓ Target is Confluence
 ✗ Target is not Grafana
@@ -98,12 +98,12 @@ Confluence 7.13.0:
 {{</details>}}
 
 
-## General Options
+## 一般选项
 
-### `-o` option
-Allows you to use other output formats.
+### `-o`选项
+允许你使用其他输出格式。
 
-Output with `-o console` (default) option:
+使用`-o console`（默认）选项进行输出：
 ```text
 All available systems to scan:
 ╭─┬──────────┬─────────────────────────────────────────────────────╮
@@ -114,7 +114,7 @@ All available systems to scan:
 ╰─┴──────────┴─────────────────────────────────────────────────────╯
 ```
 
-Output with `-o csv` option:
+用`-o csv`选项输出：
 ```text
 All available systems to scan:
 #,Name,Base CPE name
@@ -122,10 +122,10 @@ All available systems to scan:
 1,Grafana,cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*
 ```
 
-### `-s` option
-Allows you to disable the output of additional messages that are useful to the user, but not convenient for machine output processing. That is, only the result is displayed.
+### `-s`选项
+允许你禁止输出对用户有用，但不便于机器输出处理的额外信息。也就是说，只显示结果。
 
-Output of `verchk determine url`:
+`verchk determine url`的输出：
 ```text
 ✓ Target is Confluence
 ✗ Target is not Grafana
@@ -138,7 +138,7 @@ Possibly installed on endpoint:
 ╰─┴─────────────┴─────────────────────────────────────────────────────╯
 ```
 
-Output of `verchk -s determine url`:
+输出`verchk -s determine url`：
 ```text
 ╭─┬─────────────┬─────────────────────────────────────────────────────╮
 │#│Target system│Base CPE name                                        │
